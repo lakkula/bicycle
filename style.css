@@ -40,7 +40,7 @@ img{
      left: 460px;
  }
 
- #both-wheels{
+ /*#both-wheels{
      animation: moving 3s 1 linear;
  }
 
@@ -54,32 +54,30 @@ img{
      100%{
         transform: translateX(0);
      }
- }
+ }*/
 
- #bicycle-frame{
-    position: absolute;
-    animation: rotating 3s 1 linear;
-    /*transform: rotateY(180deg);*/
+ .full-bicycle{
+    /*position: absolute;*/
+    animation: rotating 5s infinite linear;
  }
 
  @keyframes rotating{
     0%{
-        transform:translateX(0);
+        transform:translateX(-85%);
     }
     49%{
-        transform:translateX(160%);
+        transform:translateX(90%);
     }
     
     50%{
-        transform:translateX(160%) rotateY(180deg);
+        transform:translateX(90%) rotateY(180deg);
         
     }
     99%{
-        transform:rotateY(180deg);
+        transform:translateX(-85%) rotateY(180deg);
     }
     
     100%{
-       transform:translateX(0);
-       /* transform:rotateY(180deg); */
+       transform:translateX(-85%);
     }
  }
