@@ -31,13 +31,13 @@ img{
      }
  }
  #wheel1{
-     top: 150px;
+     top: 149px;
      left: 34px;
  }
 
  #wheel2{
-     top: 150px;
-     left: 460px;
+     top: 149px;
+     left: 457px;
  }
 
  /*#both-wheels{
@@ -58,7 +58,7 @@ img{
 
  .full-bicycle{
     /*position: absolute;*/
-    animation: rotating 5s infinite linear;
+    animation: rotating 10s infinite linear;
  }
 
  @keyframes rotating{
