@@ -5,71 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-        img{
-           width: 100vh; 
-        }
-        .outer-div{
-            position: relative;
-        }
-        .wheel{
-            width: 200px;
-            height: 200px;
-            border: 15px solid #333;
-            border-radius: 50%;
-            position: absolute;
-            animation: spinWheel 3s infinite linear;
-        }
-
-        .spoke{
-            width: 100%;
-            height: 4px;
-            background-color: aquamarine;
-            position: absolute;
-            top: 50%;
-            transform: rotate(calc(var(--i) * 1deg));
-        }
-
-        @keyframes spinWheel{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }
-        #wheel1{
-            top: 150px;
-            left: 34px;
-        }
-
-        #wheel2{
-            top: 150px;
-            left: 460px;
-        }
-
-        #full-bicycle{
-            animation: moving 3s infinite linear;
-        }
-
-        @keyframes moving{
-            0%{
-                transform: translateX(0);
-            }
-            100%{
-                transform: translateX(80%);
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div class="outer-div">
+        <div id="bicycle">
+            <img src="bici.png" id="bicycle-img"/>
+        </div>
         <div id="full-bicycle">
-            <div id="bicycle">
-                <img src="bici.png" id="bicycle-img"/>
-            </div>
             <div class="wheel" id="wheel1">
                 <div class="spoke" style="--i: 0"></div>
                 <div class="spoke" style="--i: 45"></div>
