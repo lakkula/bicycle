@@ -9,13 +9,15 @@
         img{
            width: 100vh; 
         }
-
+        .outer-div{
+            position: relative;
+        }
         .wheel{
             width: 200px;
             height: 200px;
             border: 15px solid #333;
             border-radius: 50%;
-            position: relative;
+            position: absolute;
             animation: spinWheel 3s infinite linear;
         }
 
@@ -36,25 +38,52 @@
                 transform: rotate(360deg);
             }
         }
+        #wheel1{
+            top: 150px;
+            left: 34px;
+        }
+
+        #wheel2{
+            top: 150px;
+            left: 460px;
+        }
+
+        #full-bicycle{
+            animation: moving 3s infinite linear;
+        }
+
+        @keyframes moving{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(80%);
+            }
+        }
 
     </style>
 
 </head>
 <body>
-    <div id="bicycle">
-        <img src="bici.png"/>
-    </div>
-    <div class="wheel">
-        <div class="spoke" style="--i: 0"></div>
-        <div class="spoke" style="--i: 45"></div>
-        <div class="spoke" style="--i: 90"></div>
-        <div class="spoke" style="--i: 135"></div>
-    </div>
-    <div class="wheel">
-        <div class="spoke" style="--i: 0"></div>
-        <div class="spoke" style="--i: 45"></div>
-        <div class="spoke" style="--i: 90"></div>
-        <div class="spoke" style="--i: 135"></div>
+    <div class="outer-div">
+        <div id="full-bicycle">
+            <div id="bicycle">
+                <img src="bici.png" id="bicycle-img"/>
+            </div>
+            <div class="wheel" id="wheel1">
+                <div class="spoke" style="--i: 0"></div>
+                <div class="spoke" style="--i: 45"></div>
+                <div class="spoke" style="--i: 90"></div>
+                <div class="spoke" style="--i: 135"></div>
+            </div>
+            <div class="wheel" id="wheel2">
+                <div class="spoke" style="--i: 0"></div>
+                <div class="spoke" style="--i: 45"></div>
+                <div class="spoke" style="--i: 90"></div>
+                <div class="spoke" style="--i: 135"></div>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
